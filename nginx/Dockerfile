@@ -1,4 +1,4 @@
-FROM openresty/openresty:alpine
+FROM firesh/nginx-lua
 
 COPY nginx.conf /etc/nginx/
 COPY ./images/ /etc/nginx/images
