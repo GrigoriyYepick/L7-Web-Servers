@@ -1,4 +1,4 @@
-local md5 = require 'md5'
+local md5 = require ("etc.nginx.lua.md5")
 
 function file_exists(name)
         local f = io.open(name, "r")
@@ -49,6 +49,7 @@ function purge(filename)
 end
 
 ngx.say("Start")
+print("Hello world")
 
 if ngx ~= nil then
         local cache_key = ngx.var.lua_purge_upstream .. ngx.var.request_uri
